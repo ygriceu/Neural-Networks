@@ -1,0 +1,8 @@
+# To ensure project size is small, and files like ipynb_checkpoints are
+# not checked in we have patched a .gitignore file into your project.
+
+# This file helps ensure a smooth candidate experience and allows us
+# to process candidate reports faster.
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
