@@ -1,9 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+.env
+.ipynb_checkpoints/
+
+# Heavy artifacts (don’t push)
 artifacts*/
 artifacts_nn*/
 runs_nn*/
-model_best*/
+model_best/
+cache/
+tmp/
 *.safetensors
 *.bin
 *.pt
 *.ckpt
 .DS_Store
+
+# Local data (avoid leaking)
+train.csv
+test.csv
+sample_submission.csv
+
+# OS
+Thumbs.db

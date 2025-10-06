@@ -1,0 +1,11 @@
+# Baseline TF-IDF
+python sentiment_baseline.py --train train.csv --test test.csv --sample sample_submission.csv --out submission_tf_idf.csv
+
+# HF baseline
+python nn_finetune_baseline.py --train train.csv --test test.csv --sample sample_submission.csv \
+  --model distilbert-base-uncased --max-len 160 --epochs 3 --train-bs 16 --eval-bs 32 --lr 4e-5 --reuse-split
+
+# Final configuration (roberta-base)
+python nn_finetune_steps_smooth.py --train train.csv --test test.csv --sample sample_submission.csv \
+  --model roberta-base --max-len 160 --train-bs 16 --eval-bs 32 --epochs 3 \
+  --lr 4e-5 --ls 0.02 --eval-steps 80 --oversample-factor 1.3 --reuse-split
